@@ -1,10 +1,11 @@
 var selectedRow = null;
 
 function onFormSubmit() {
-    if (ValidityState()) {
+    if (validate()) {
         var formData = readFormData();
-        if (selectedRow == null) insrtNewRecord(formData);
+        if (selectedRow == null) insertNewRecord(formData);
         else updateRecord(formData);
         resetForm();
     }
 }
+
