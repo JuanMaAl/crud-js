@@ -32,3 +32,29 @@ input[type=submit] {
 .botones-accion-formulario {
     text-align:right;
 }
+
+.tabla-empleados{
+    border-style: solid;
+    padding: 20px;
+    margin: auto;
+    width: 70%;
+}
+
+body > tabke{
+    width: 80%;
+}
+
+table{
+    width: 80%;
+    border-collapse: collapse;
+}
+
+table.list{
+    width:100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
