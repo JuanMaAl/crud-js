@@ -40,16 +40,15 @@ input[type=submit] {
     width: 70%;
 }
 
-body > tabke{
+body > table{
     width: 80%;
 }
 
 table{
-    width: 80%;
     border-collapse: collapse;
 }
 
-table.list{
+table.lista{
     width:100%;
 }
 
@@ -57,4 +56,25 @@ td, th {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+}
+
+tr:nth-child(even),table.lista thead>tr {
+    background-color: #dddddd;
+}
+
+
+a{
+    cursor:pointer;
+    text-decoration: underline;
+    color: #0000ee;
+    margin-right: 4px;
+}
+
+label.validation-error{
+    color: red;
+    margin-left: 5px;
+}
+
+.hide{
+    display: none;
 }
