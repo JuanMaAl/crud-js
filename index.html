@@ -9,6 +9,42 @@
 </head>
 <body>
     <h1>Vanilla JavaScript CRUD</h1>
+    <hr>
+        <div class="formulario-empleados">
+            <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                <div>
+                    <label>Nombre Completo</label>
+                    <input type ="text" name="nombreCompleto" id="nombreCompleto">
+                </div>
+                <div>
+                    <label>Email</label>
+                    <input type="text" name="email" id="email">
+                </div>
+                <div>
+                    <label>Salario</label>
+                    <input type="text" name="'salario" id="salario">
+                </div>
+                <div>
+                    <label>Ciudad</label>
+                    <input type="text" name="ciudad" id="ciudad">
+                </div>
+                <div>
+                    <input type="submit" value="Submit">
+                </div>
+            </form> 
+        </div>
+        <br>
+        <div class="tabla-empleados">
+            <table class="lista" id="listaEmpleados">
+                <thead>
+                    <th>Nombre Completo</th>
+                    <th>Email</th>
+                    <th>Salario</th>
+                    <th>Ciudad</th>
+                    <th>Acciones</th>
+                </thead>
+            </table>
+        </div>
+        <script src="script.js"></script>
 </body>
-
 </html>
