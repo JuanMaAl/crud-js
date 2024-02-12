@@ -57,3 +57,17 @@ function onDelete(td) {
         resetForm();
     }
 }
+
+function validate(){
+    isValid = true;
+    if (document.getElementById("nombreCompleto").value == "") {
+        isValid = false;
+        document.getElementById("nameValidationError").classList.remove("hide");
+    } else {
+        isValid = true;
+        if (!document.getElementById("nameValidationError").classList.contains("hide")){
+            document.getElementById("nameValidationError").classList.add("hide");
+        }
+    }
+    return isValid;
+}
