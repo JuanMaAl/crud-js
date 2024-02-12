@@ -17,3 +17,19 @@ function readFormData() {
     formData["ciudad"] = document.getElementById("ciudad").value;
     return formData;
 }
+
+function insertNewRecord(data) {
+    var tabla = document.getElementById("listaEmpleados").getElementsByTagName('tbody')[0];
+    var nuevaFila = tabla.insertRow(tabla.length);
+    celda1 = nuevaFila.insertCell(0);
+    celda2 = nuevaFila.insertCell(1);
+    celda3 = nuevaFila.insertCell(2);
+    celda4 = nuevaFila.insertCell(3);
+    celda5 = nuevaFila.insertCell(4);
+    celda1.innerHTML = data.nombreCompleto;
+    celda2.innerHTML = data.email;
+    celda3.innerHTML = data.salario;
+    celda4.innerHTML = data.ciudad;
+    celda5.innerHTML = `<a onClick="onEdit(this)>Editar</a>
+                        <a onClick="onDelete(this>Borrar</a>)`;
+}
