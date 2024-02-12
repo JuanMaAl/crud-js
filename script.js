@@ -30,8 +30,8 @@ function insertNewRecord(data) {
     celda2.innerHTML = data.email;
     celda3.innerHTML = data.salario;
     celda4.innerHTML = data.ciudad;
-    celda5.innerHTML = `<a onClick="onEdit(this)>Editar</a>
-                        <a onClick="onDelete(this>Borrar</a>)`;
+    celda5.innerHTML = `<a onClick="onEdit(this)">Editar</a>;
+                        <a onClick="onDelete(this)">Borrar</a>`;
 }
 
 function resetForm() {
