@@ -48,6 +48,12 @@ function onEdit(td) {
     document.getElementById("email").value = filaSeleccionada.cells[1].innerHTML;
     document.getElementById("salario").value = filaSeleccionada.cells[2].innerHTML;
     document.getElementById("ciudad").value = filaSeleccionada.cells[3].innerHTML;
-    )
 }
 
+function onDelete(td) {
+    if (confirm('Estas seguro que quieres eliminar este registro?')){
+        row = td.parentElement.parentElement;
+        document.getElementById("listaEmpleados").deleteRow(row.rowIndex);
+        resetForm();
+    }
+}
