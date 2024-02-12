@@ -50,6 +50,13 @@ function onEdit(td) {
     document.getElementById("ciudad").value = filaSeleccionada.cells[3].innerHTML;
 }
 
+function updateRecord(formData) {
+    filaSeleccionada.cells[0].innerHTML = formData.nombreCompleto;
+    filaSeleccionada.cells[1].innerHTML = formData.email;
+    filaSeleccionada.cells[2].innerHTML = formData.salario;
+    filaSeleccionada.cells[3].innerHTML = formData.city;
+}
+
 function onDelete(td) {
     if (confirm('Estas seguro que quieres eliminar este registro?')){
         row = td.parentElement.parentElement;
