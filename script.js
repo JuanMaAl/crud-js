@@ -1,9 +1,9 @@
-var selectedRow = null;
+var filaSeleccionada = null;
 
 function onFormSubmit() {
     if (validate()) {
         var formData = readFormData();
-        if (selectedRow == null) insertNewRecord(formData);
+        if (filaSeleccionada == null) insertNewRecord(formData);
         else updateRecord(formData);
         resetForm();
     }
@@ -32,4 +32,12 @@ function insertNewRecord(data) {
     celda4.innerHTML = data.ciudad;
     celda5.innerHTML = `<a onClick="onEdit(this)>Editar</a>
                         <a onClick="onDelete(this>Borrar</a>)`;
+}
+
+function resetForm() {
+    document.getElementById("nombreCompleto").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("salario").value = "";
+    document.getElementById("ciudad").value = "";
+    filaSeleccionada = null;
 }
