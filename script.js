@@ -45,7 +45,7 @@ function resetForm() {
 function onEdit(td) {
     filaSeleccionada = td.parentElement.parentElement;
     document.getElementById("nombreCompleto").value = filaSeleccionada.cells[0].innerHTML;
-    document.getElementById("email").value = filaSelecci onada.cells[1].innerHTML;
+    document.getElementById("email").value = filaSeleccionada.cells[1].innerHTML;
     document.getElementById("salario").value = filaSeleccionada.cells[2].innerHTML;
     document.getElementById("ciudad").value = filaSeleccionada.cells[3].innerHTML;
 }
@@ -54,7 +54,7 @@ function updateRecord(formData) {
     filaSeleccionada.cells[0].innerHTML = formData.nombreCompleto;
     filaSeleccionada.cells[1].innerHTML = formData.email;
     filaSeleccionada.cells[2].innerHTML = formData.salario;
-    filaSeleccionada.cells[3].innerHTML = formData.city;
+    filaSeleccionada.cells[3].innerHTML = formData.ciudad;
 }
 
 function onDelete(td) {
